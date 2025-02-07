@@ -10,6 +10,7 @@ function App() {
 
   return (
     <main className="max-w-[1596px] mx-auto px-2">
+      <h1>Test title</h1>
       <Search
         type="text"
         placeholder="Search characters..."
