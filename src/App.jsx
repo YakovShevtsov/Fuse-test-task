@@ -6,7 +6,7 @@ import useFetch from "./hooks/useFetch.js";
 
 function App() {
   
-  const {data: fetchedCharacters, error: errorFetchingCharacters, isLoading, debouncedFetch} = useFetch(fetchCharacters);
+  const {data: fetchedCharacters, error: errorFetchingCharacters, isLoading, debouncedFetch} = useFetch(fetchCharacters, 500);
 
   return (
     <main className="max-w-[1596px] mx-auto px-2">

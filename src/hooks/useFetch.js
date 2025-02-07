@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { debounce } from "../utils";
 
-export default function useFetch(fetchFn) {
+export default function useFetch(fetchFn, debounceDelay) {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -27,7 +27,7 @@ export default function useFetch(fetchFn) {
     } finally {
       setIsLoading(false);
     }
-  }, 500);
+  }, debounceDelay);
 
   return {
     data, error, isLoading, debouncedFetch
