@@ -5,16 +5,19 @@ import fetchCharacters from "./http.js";
 import useFetch from "./hooks/useFetch.js";
 
 function App() {
-  
-  const {data: fetchedCharacters, error: errorFetchingCharacters, isLoading, debouncedFetch} = useFetch(fetchCharacters, 500);
+  const {
+    data: fetchedCharacters,
+    error: errorFetchingCharacters,
+    isLoading,
+    debouncedFetch: debouncedFetchingCharacters,
+  } = useFetch(fetchCharacters, 500);
 
   return (
     <main className="max-w-[1596px] mx-auto px-2">
-      <h1>Test title</h1>
       <Search
         type="text"
         placeholder="Search characters..."
-        onSearch={debouncedFetch}
+        onSearch={debouncedFetchingCharacters}
         quantityFound={fetchedCharacters.length}
         autoFocus
       />
