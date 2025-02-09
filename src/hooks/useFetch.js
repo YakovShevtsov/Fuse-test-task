@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { debounce } from "../utils";
+import { debounce } from "../utils.js";
 
 export default function useFetch(fetchFn, debounceDelay) {
   const [data, setData] = useState([]);

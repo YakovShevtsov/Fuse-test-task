@@ -1,4 +1,4 @@
-import Character from "./Character";
+import Character from "./Character.jsx";
 
 function CharactersList({ charactersList }) {
   return (
@@ -11,7 +11,6 @@ function CharactersList({ charactersList }) {
             status={character.status}
             created={character.created}
             url={character.url}
-            image={character.image}
           />
         ))}
       </div>
@@ -24,7 +23,6 @@ function CharactersList({ charactersList }) {
             status={character.status}
             created={character.created}
             url={character.url}
-            image={character.image}
           />
         ))}
       </div>
